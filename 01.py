@@ -151,7 +151,29 @@ print(encrypt(encrypt("pig", CIPHER_DICT), DECIPHER_DICT)) #pig
 print(encrypt(encrypt("hello world", CIPHER_DICT), DECIPHER_DICT))	#hello world
 print()
 
- 
+# 10/ Part 3 - Create a random cipher dictionary
 
+import random
 
+def make_cipher_dict(alphabet):
+    """
+    Given a string of unique characters, compute a random 
+    cipher dictionary for these characters
+    """
+    letters = list(alphabet)
+    shuffled_letters = list(alphabet)
+    random.shuffle(shuffled_letters)
+    
+    cipher_dict = {}
+    for idx in range(len(alphabet)):
+        letter = letters[idx]
+        shuffled_letter = shuffled_letter[idx]
+        cipher_dict[letter] = shuffled_letter
+    return cipher_dict
 
+# Tests
+print("Output for part 3") # Output for part 3 -  note that answers are randomized
+print(make_cipher_dict("")) #{}
+print(make_cipher_dict("cat")) #{'a': 'a', 't': 'c', 'c': 't'}
+print(make_cipher_dict("abcdefghijklmnopqrstuvwxyz "))
+#{'a': 'h', 'l': 'u', 'u': 'q', 'b': 'v', 'y': 'a', 'm': 'r', 'p': 'j', 'k': 'e', 'n': 'p', 't': 'x', 'd': 'o', 'c': 'c', 'w': ' ', 'f': 'd', 'r': 'z', 'v': 'l', 's': 'y', 'e': 'b', 'o': 'i', 'x': 'm', 'h': 's', 'i': 'w', 'q': 'g', 'g': 'n', 'j': 'f', 'z': 'k', ' ': 't'}
