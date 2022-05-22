@@ -179,6 +179,11 @@ print(make_cipher_dict("abcdefghijklmnopqrstuvwxyz ")) #{'a': 'h', 'l': 'u', 'u'
 
 
 # 11/ count_letters
+# Week 1-Quiz
+# A function that takes a list of words that are composed entirely of lower case letters. 
+# Returns the letter that appears most frequently in the words in word_list and counts how many times that letter appeared. 
+# example: monty_quote
+# prints: ('e', 20)
 
 def count_letters(word_list):
     """ See question description """
