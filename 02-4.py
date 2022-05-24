@@ -39,7 +39,6 @@ def print_dict_keys(my_dict):
     for key in my_dict: # note my_dict.keys() works here too
         print("Key =", key, "has value =", my_dict[key])
         
-        
 def print_dict_items(my_dict):
     """
     Print the contents of a dictionary to the console
@@ -48,7 +47,6 @@ def print_dict_items(my_dict):
     print("Printing dictionary", my_dict, "in readable form")
     for (key, value) in my_dict.items():
         print("Key =", key, "has value =", value)
-
 
 def run_print_dict_examples():
     """
